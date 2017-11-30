@@ -17,9 +17,9 @@ namespace Products
             this.productName = productName;
         }
 
-        public string Examine()
+        public override string ToString()
         {
-            return "Product:\t" + productName + "\n" + "Price:\t" + price + " kr\n";
+            return "Product:\t" + productName + "\n" + "\t\tPrice:\t" + price + " kr\n";
         }
 
         public int GetPrice()

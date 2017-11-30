@@ -50,6 +50,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Snack.cs" />
     <Compile Include="VendingMachine.cs" />
+    <Compile Include="VendingMachineManagement.cs" />
+    <Compile Include="VendingMachineManagementInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

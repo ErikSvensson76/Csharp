@@ -62,17 +62,47 @@ namespace VendingMachine
             }
         }
 
-        public int GetMoneyPool()
+        public int WithDrawMoney()
         {
-            return this.moneyPool;
+            int temp = this.moneyPool;
+            moneyPool = 0;
+            return temp;
         }
 
-        public void SetMoneyPool(int index)
+        public bool SetMoneyPool(int index)
         {
+            index--;
+
+            if(index >= moneyDenominations.Length || index < 0)
+            {
+                Console.WriteLine("Choice is not valid");
+                return false;
+            }
+           
             moneyPool += moneyDenominations[index];
             Console.WriteLine(moneyDenominations[index] + " kr inserted.");
+            return true;
         }
 
+        public Product GetProduct(int index)
+        {
+            return inventory.ElementAt(index);
+        }
+
+        public int NumberOfProducts()
+        {
+            return inventory.Count();
+        }
+
+        public int[] GetMoneyDenominations()
+        {
+            return this.moneyDenominations;
+        }
+
+        public int GetMoneyPool()
+        {
+            return moneyPool;
+        }
 
 
 
